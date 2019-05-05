@@ -1,11 +1,11 @@
-package cn.edu360.day4
+package cn.ip
 
 import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by zx on 2017/10/9.
+  *     广播变量的使用
   */
 object IpLoaction1 {
 
@@ -28,7 +28,6 @@ object IpLoaction1 {
     //创建RDD，读取访问日志
     val accessLines: RDD[String] = sc.textFile(args(1))
 
-    //这个函数是在哪一端定义的？（Driver）
     val func = (line: String) => {
       val fields = line.split("[|]")
       val ip = fields(1)

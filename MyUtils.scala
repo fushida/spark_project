@@ -1,14 +1,15 @@
-package cn.edu360.day4
+package cn.ip
 
 import java.sql.{Connection, DriverManager, PreparedStatement}
 
 import scala.io.{BufferedSource, Source}
 
-/**
-  * Created by zx on 2017/10/9.
-  */
+/*********
+ip的处理
+**************/
 object MyUtils {
-
+ 
+ //将ip地址转换成十进制
   def ip2Long(ip: String): Long = {
     val fragments = ip.split("[.]")
     var ipNum = 0L
@@ -25,14 +26,14 @@ object MyUtils {
     //对ip规则进行整理，并放入到内存
     val rules: Array[(Long, Long, String)] = lines.map(line => {
       val fileds = line.split("[|]")
-      val startNum = fileds(2).toLong
+      val startNum = fileds(2).toLong  //1.0.1.0|1.0.3.255|16777472|16778239|亚洲|中国|福建|福州||电信|350100|China|CN|119.306239|26.075302
       val endNum = fileds(3).toLong
       val province = fileds(6)
       (startNum, endNum, province)
     }).toArray
     rules
   }
-
+  //折半查找ip
   def binarySearch(lines: Array[(Long, Long, String)], ip: Long) : Int = {
     var low = 0
     var high = lines.length - 1
@@ -52,7 +53,7 @@ object MyUtils {
   def data2MySQL(it: Iterator[(String, Int)]): Unit = {
     //一个迭代器代表一个分区，分区中有多条数据
     //先获得一个JDBC连接
-    val conn: Connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bigdata?characterEncoding=UTF-8", "root", "123568")
+    val conn: Connection = DriverManager.getConnection("jdbc:mysql:", "root", "123568")
     //将数据通过Connection写入到数据库
     val pstm: PreparedStatement = conn.prepareStatement("INSERT INTO access_log VALUES (?, ?)")
     //将分区中的数据一条一条写入到MySQL中
@@ -73,7 +74,7 @@ object MyUtils {
 
   def main(args: Array[String]): Unit = {
     //数据是在内存中
-    val rules: Array[(Long, Long, String)] = readRules("/Users/zx/Desktop/ip/ip.txt")
+    val rules: Array[(Long, Long, String)] = readRules("/Users/ip/ip_log.txt")
     //将ip地址转换成十进制
     val ipNum = ip2Long("114.215.43.42")
     //查找

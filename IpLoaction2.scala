@@ -7,7 +7,7 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by zx on 2017/10/9.
+  * 当规则在HDFS中，Drive端应该先获取收集规则，再广播出去
   */
 object IpLoaction2 {
 
