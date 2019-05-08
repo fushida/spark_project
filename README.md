@@ -18,4 +18,13 @@
  
 3)RDD_Sorts 是RDD对于排序规则实例用法。里面有六种形式，主要的差别是在是否有函数方法构造、序列化、利用元组的规则等
 
-4)SparkSql 是SparkSql中spark1.0和spark2.0的总结与demo。在SQLdemo1_spark1.scala中对于1.0的使用笔记;也有Dataset中实现wordcount
+4)SparkSql 是SparkSql中spark1.0和spark2.0的总结与demo。在SQLdemo1_spark1.scala中对于1.0的使用笔记，RDD实现DataSet和DataFrame
+
+         SparkSql实现RDD转化为DataFrame操作和总结SQLdemo.scala
+		 
+		 DataSource_ .scala是spark从不同格式的文件中读取数据的样例
+		 
+		 Wordcunt 实现代码DateSetWordCount.scala 和SQLWordCount.scala
+		 
+		 SparkJoinTest 实现无结构表转化为架构表后,利用join实现多个表的复杂逻辑简单操作
+		 
