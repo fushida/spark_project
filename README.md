@@ -1,5 +1,7 @@
 # Spark  Project 
 
+pom.xml帮助建立相关的连接
+
 1)RDD_Subject 是利用RDD算子实现的一个实例，有助于对RDD的理解
 
          subiect.log 里面是1000条课程日志信息，类似：http://www.python.org.cn/kuli  python为课程名，kuli为任课老师
