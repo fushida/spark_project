@@ -11,8 +11,8 @@ pom.xml帮助建立相关的连接
 		 
 2)ip_log  获取用户端的ip，通过ip规则归属地查询获取用户当前的位置信息IpLoaction.scala仅仅用RDD算子，IpLoactionSQL.scala运用SparkSQL
    
-         ip_log.txt 是中国ip归属地划分规则
-         user.log是用户行为日志采集的信息
+             ip_log.txt 是中国ip归属地划分规则
+             user.log是用户行为日志采集的信息
    
    
    
@@ -31,4 +31,7 @@ pom.xml帮助建立相关的连接
 		 SparkJoinTest 实现无结构表转化为架构表后,利用join实现多个表的复杂逻辑简单操作
 		 
 		 在Spark上使用Hive数据库HiveOnSpark.scala
+		 
+5)streaming 中有实现streaming实现wordcount;kafka实现对数据的实时读取数据：KafkaWordCount.scala，对历史数据累加：KafkaWordCountStateful.scala
+         比较直接方式和receiver方式，以及两者的实现，编写直连方式偏移量。
 		 
