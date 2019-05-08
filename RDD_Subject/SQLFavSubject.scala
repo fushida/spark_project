@@ -4,7 +4,7 @@ import org.apache.spark.sql.{DataFrame, Dataset, SparkSession}
 /**
   * 使用Sparksql实现TopN查找
   */
-//代码缺失精简，也很好理解
+//代码精简，也很好理解
 object SQLFavSubject {
 
   def main(args: Array[String]): Unit = {
