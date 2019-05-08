@@ -4,7 +4,7 @@ pom.xml帮助建立相关的连接
 
 1)RDD_Subject 是利用RDD算子实现的一个实例，有助于对RDD的理解
 
-         subiect.log 里面是1000条课程日志信息，类似：http://www.python.org.cn/kuli  python为课程名，kuli为任课老师
+             subiect.log 里面是1000条课程日志信息，类似：http://www.python.org.cn/kuli  python为课程名，kuli为任课老师
 		 
 		 SQLFavSubject.scala 运用Sparksql实现
 		 
@@ -22,11 +22,13 @@ pom.xml帮助建立相关的连接
 
 4)SparkSql 是SparkSql中spark1.0和spark2.0的总结与demo。在SQLdemo1_spark1.scala中对于1.0的使用笔记，RDD实现DataSet和DataFrame
 
-         SparkSql实现RDD转化为DataFrame操作和总结SQLdemo.scala
+             SparkSql实现RDD转化为DataFrame操作和总结SQLdemo.scala
 		 
 		 DataSource_ .scala是spark从不同格式的文件中读取数据的样例
 		 
 		 Wordcunt 实现代码DateSetWordCount.scala 和SQLWordCount.scala
 		 
 		 SparkJoinTest 实现无结构表转化为架构表后,利用join实现多个表的复杂逻辑简单操作
+		 
+		 在Spark上使用Hive数据库HiveOnSpark.scala
 		 
