@@ -3,10 +3,12 @@
 1)RDD_Subject 是利用RDD算子实现的一个实例，有助于对RDD的理解
          subiect.log 里面是1000条课程日志信息，类似：http://www.python.org.cn/kuli  python为课程名，kuli为任课老师
 		 
-2)ip_log  获取用户端的ip，通过ip规则归属地查询获取用户当前的位置信息
+2)ip_log  获取用户端的ip，通过ip规则归属地查询获取用户当前的位置信息IpLoaction仅仅用RDD算子，IpLoactionSQL运用SparkSQL
    
          ip_log.txt 是中国ip归属地划分规则
          user.log是用户行为日志采集的信息
+   
+   
    
 
  
