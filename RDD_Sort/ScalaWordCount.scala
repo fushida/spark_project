@@ -36,7 +36,11 @@ object ScalaWordCount {
     val reduced:RDD[(String, Int)] = wordAndOne.reduceByKey(_+_)
     //排序
     //val sorted: RDD[(String, Int)] = reduced.sortBy(_._2, false)
-    //将结果保存到HDFS中
+   
+   //****1.直接输出
+	 println(sorted.collect().toBuffer)//要.toBuffer
+
+   //****2.将结果保存到HDFS中
     reduced.saveAsTextFile(args(1))
 
   //    val func = (index: Int, it: Iterator[Int]) => {
