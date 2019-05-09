@@ -10,7 +10,7 @@ import org.apache.spark.{SparkConf, SparkContext}
   * 最基本的方式，没有利用分组
   */
 /***   切分规则
- val line = "http://bigdata.edu360.cn/laozhao"
+ val line = "http://python.org/stack"
     
      //学科，老师
 //    val splits: Array[String] = line.split("/")
