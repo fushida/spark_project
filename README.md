@@ -19,6 +19,8 @@ pom.xml帮助建立相关的连接
 
  
 3)RDD_Sorts 是RDD对于排序规则实例用法。里面有六种形式，主要的差别是在是否有函数方法构造、序列化、利用元组的规则等
+              
+			  ScalaWordCount.scala 是RDD实现wordcount,以及过程的理解
 
 4)SparkSql 是SparkSql中spark1.0和spark2.0的总结与demo。在SQLdemo1_spark1.scala中对于1.0的使用笔记，RDD实现DataSet和DataFrame
 
