@@ -1,5 +1,3 @@
-package cn.edu360.day9
-
 import org.apache.spark.{HashPartitioner, SparkConf}
 import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 import org.apache.spark.streaming.kafka.KafkaUtils

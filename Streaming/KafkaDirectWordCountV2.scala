@@ -1,5 +1,3 @@
-package cn.edu360.day9
-
 import kafka.common.TopicAndPartition
 import kafka.message.MessageAndMetadata
 import kafka.serializer.StringDecoder
