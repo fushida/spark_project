@@ -1,3 +1,6 @@
+ //******将统计出来的结果存储成json文件格式*****
+ 
+ 
 import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.spark.sql.{DataFrame, SQLContext}
 import org.apache.spark.{SparkConf, SparkContext}
@@ -14,7 +17,7 @@ import org.apache.spark.{SparkConf, SparkContext}
   *     将统计出来的结果存储到mysql中
   */
   
-  //******将统计出来的结果存储成json文件格式*****
+ 
 object ProCityJson {
 
     def main(args: Array[String]): Unit = {
