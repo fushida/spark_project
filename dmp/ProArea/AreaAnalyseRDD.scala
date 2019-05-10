@@ -38,7 +38,7 @@ object AreaAnalyseRDD {
         // sparkConf.registerKryoClasses(Array(classOf[Log]))
 
         val sc = new SparkContext(sparkConf)
-        //*****************************法一
+        //*****************************读取原始数据
         sc.textFile(logInputPath)
           .map(_.split(",", -1))
           .filter(_.length >= 85)
@@ -57,8 +57,8 @@ object AreaAnalyseRDD {
           .saveAsTextFile(resultOutputPath)
 
 
-         //*****************************法二
-        // 读取parquet文件
+         //*****************************读取parquet文件
+    
         /*val sQLContext = new SQLContext(sc)
         val parquetData: DataFrame = sQLContext.read.parquet(logInputPath)
         parquetData.map(row =>{
